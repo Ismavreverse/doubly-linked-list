@@ -1,25 +1,104 @@
 const Node = require('./node');
 
 class LinkedList {
-    constructor() {}
+    constructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
 
-    append(data) {}
+    Node(data) {
+        this.data = data;
+        this.previous = null;
+        this.next = null;
+    }
 
-    head() {}
+    append(data) {
+        var node = new Node(data);
+        if (this.head == 0 ) {
+            this.head = node;
+        } else {
+            node.data = data;
+            head();
+        }
+        if (this.tail == 0) {
+            this.tail = node;
+        } else {
+            node.data = data;
+            tail();
+        }
+        this.numberOfValues++;
+    }
 
-    tail() {}
+    head() {
+        node.next = this.head;
+        this.head.previous = node;
+    }
 
-    at(index) {}
+    tail() {
+        node.previous = this.tail;
+        this.tail.next = node;
+    }
 
-    insertAt(index, data) {}
+    at(index) {
+        this.length = index;
+        if (node.length) {
+            Console.log(node.data);
+        }
+        else {
+            Console.log("Please check with valid index");
+        }
+    }
 
-    isEmpty() {}
+    insertAt(index, data) {
+        this.length= index;
+        if (node.length) {
+            node.next = this.head;
+            node.data = data;
+            node.previous = this.tail;
+            this.next = node.length++;
+            this.previous = node.length;
+            this.numberOfValues++;
+        }
+        else {
+            node.data = data;
+        } 
+    }
 
-    clear() {}
 
-    deleteAt(index) {}
+    isEmpty() {
+        if (this.length == 0) {
+            Console.log("Is Empty");
+        }
+        else
+            Console.log("Has Values");
+    }
 
-    reverse() {}
+    clear() {
+        this.data = null;
+        this.previous = null;
+        this.next = null;
+    }
+
+    deleteAt(index) {
+        this.length = index;
+        if (node.length) {
+            node.next = null;
+            node.data = null;
+            node.length++;
+            node.previous = this.tail;
+            this.numberOfValues--;
+        }
+        else {
+            Console.Log("Index is incorrect");
+        }
+    }
+
+    reverse() {
+        var node = new node();
+        if (node.length){
+        }
+    }
 
     indexOf(data) {}
 }
