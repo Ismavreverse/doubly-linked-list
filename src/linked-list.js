@@ -15,14 +15,16 @@ class LinkedList {
 
     append(data) {
         var node = new Node(data);
-        if (this.head == 0 ) {
+        if (this.head == null ) {
             this.head = node;
+            node.data = data;
         } else {
             node.data = data;
             head();
         }
-        if (this.tail == 0) {
+        if (this.tail == null) {
             this.tail = node;
+            node.data = data;
         } else {
             node.data = data;
             tail();
@@ -96,11 +98,23 @@ class LinkedList {
 
     reverse() {
         var node = new node();
-        if (node.length){
+        var oflag = 0;
+        for (i = 0; i <= node.length; i++) {
+            while (node.next == NULL) {
+                var cflag = i.length;
+            }
+            cflag.next = cflag.previous;
+            cflag.previous = null;
         }
     }
 
-    indexOf(data) {}
+    indexOf(data) {
+        while (node.data == data)
+        {
+            node.length++;
+            var index = node.length;
+        }
+    }
 }
 
 module.exports = LinkedList;
